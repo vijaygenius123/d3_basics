@@ -6,7 +6,7 @@ const data = [
     {id: 4, value: 9, region: 'Germany'},
 ]
 
-const container = d3.select('div')
+const container = d3.select('svg')
     .classed('container', true)
     .style('border', '1px solid red');
 
@@ -14,9 +14,9 @@ container
     .selectAll('.bar')
     .data(data)
     .enter()
-    .append('div')
+    .append('rect')
     .classed('bar', true)
-    .style('width', '50px')
-    .style('height', data => (data.value * 10) + 'px')
+    .attr('width', '50px')
+    .attr('height', data => (data.value * 10) + 'px')
 
 
