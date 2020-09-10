@@ -22,7 +22,7 @@ const container = d3.select('svg')
     .classed('container', true)
     .style('border', '1px solid red');
 
-container
+const bars = container
     .selectAll('.bar')
     .data(data)
     .enter()
@@ -33,4 +33,6 @@ container
     .attr('x', data => xScale(data.region))
     .attr('y', data => yScale(data.value))
 
-
+setTimeout(function (){
+    bars.data(data.slice(0,2)).exit().remove();
+},2000)
