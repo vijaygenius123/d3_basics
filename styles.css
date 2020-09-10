@@ -10,11 +10,11 @@ html, body {
 .container {
     padding: 8px;
     width: 100%;
-    height: 50vh;
+    height: 300px;
     display: flex;
     justify-content: space-around;
 }
 
 .bar{
-    fill: #ff0000;
+    fill: green;
 }
